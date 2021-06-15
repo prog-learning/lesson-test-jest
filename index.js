@@ -1,4 +1,2 @@
-const sayHello = () => 'hello';
-const sum = (a, b) => a + b;
-
-module.exports = { sayHello, sum };
+export const sayHello = () => 'hello';
+export const sum = (a, b) => a + b;

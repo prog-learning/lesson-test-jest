@@ -1,4 +1,4 @@
-const { sayHello, sum } = require('./index');
+import { sayHello, sum } from './index';
 
 test('あいさつのテスト', () => {
   expect(sayHello()).toBe('hello');
