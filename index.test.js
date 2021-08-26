@@ -1,4 +1,4 @@
-import { sayHello, sum, chengeObj, testReturn } from './index';
+import { sayHello, sum, chengeObj } from './index';
 
 describe('テストの練習', () => {
   test('あいさつのテスト', () => {
@@ -18,30 +18,36 @@ describe('テストの練習', () => {
 
   test('結果がオブジェクトのテスト', () => {
     // console.log(chengeObj(['apple', 'banana']));
-    expect(chengeObj(['apple', 'banana'])).toEqual({ apple: 'apple', banana: 'banana' });
-    expect(chengeObj(['apple', 'banana'])).not.toBe({ apple: 'apple', banana: 'banana' }); // ≠ の判定になるので注意
+    expect(chengeObj(['apple', 'banana'])).toEqual({
+      apple: 'apple',
+      banana: 'banana',
+    });
+    expect(chengeObj(['apple', 'banana'])).not.toBe({
+      apple: 'apple',
+      banana: 'banana',
+    }); // ≠ の判定になるので注意
   });
 });
 
 describe('真偽値系統のテスト', () => {
   /* いろいろある */
   test('nullの場合', () => {
-    expect(testReturn(null)).toBeNull(); // null である
+    expect(null).toBeNull(); // null である
   });
   test('undefinedの場合', () => {
-    expect(testReturn()).toBeUndefined(); // undefined である
+    expect().toBeUndefined(); // undefined である
   });
   test('文字列の場合(undefinedではない判定)', () => {
-    expect(testReturn('hey yo')).toBeDefined(); // undefined ではない
+    expect('hey yo').toBeDefined(); // undefined ではない
   });
   test('空の配列(trueと判定されるもの)', () => {
-    expect(testReturn([])).toBeTruthy(); // true と判定されるもの
+    expect([]).toBeTruthy(); // true と判定されるもの
   });
   test('空の文字列', () => {
-    expect(testReturn('')).not.toBeTruthy(); // false と判定されるもの
+    expect('').not.toBeTruthy(); // false と判定されるもの
   });
   test('数字の0', () => {
-    expect(testReturn(0)).toBeFalsy(); // false と判定されるもの
+    expect(0).toBeFalsy(); // false と判定されるもの
   });
 });
 

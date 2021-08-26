@@ -9,5 +9,3 @@ export const chengeObj = (array) => {
   });
   return obj;
 };
-
-export const testReturn = (expect) => expect;
