@@ -2,6 +2,18 @@
 
 ## Lesson
 
-test をグループ分けできる describe
+commit 時に Jest を実行して,commit をテストする.
+husky の install を
+明日までに実行する.
 
-describe.each で
+```sh
+yarn add --dev husky
+```
+
+```sh
+yarn husky install
+```
+
+```sh
+yarn husky add .husky/pre-commit "yarn test"
+```
