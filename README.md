@@ -3,8 +3,10 @@
 ## Lesson
 
 commit 時に Jest を実行して,commit をテストする.
-husky の install を
-明日までに実行する.
+
+husky の install
+
+https://typicode.github.io/husky/#/
 
 ```sh
 yarn add --dev husky
